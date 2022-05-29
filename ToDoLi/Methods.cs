@@ -68,6 +68,7 @@ namespace ToDoLy
                 Console.Write("Would you like to remove all? Y/N: ");
                 answer = Console.ReadLine();
                 if (answer.Trim().ToUpper() == "Y") { tasks.RemoveAll(r => r.ID == editID); }
+                else { Console.WriteLine("Keeping all duplicates."); }
             }
         }
     }
