@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "eYqu5TbbAdMici7TCvmtSvm7qwHarBt6BjSJ2QNPUyV50x5tQuV9h149sdvjSZpBRNMCnFXlSEBuI/GPMOnTFQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mil\\OneDrive\\Documents\\Lexicon\\Visuals\\Csharp\\ToDoLi\\ToDoLi\\ToDoLy.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mil\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
