@@ -2,6 +2,7 @@
 
 namespace ToDoLy
 {
+    //Object representing a task in a todo list
     internal class Task
     {
         public Task(string title, DateTime dueDate, bool isCompleted, string project, int id)

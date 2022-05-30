@@ -20,7 +20,7 @@ namespace ToDoLy
             List<Task> sortedTasks;
             Task taskToEdit;
             int totalNumberOfTasks, numberOfCompletedTasks;
-            string answer = "0";
+            string answer = "0"; //user input
             string description, project;
             DateTime date;
 
@@ -94,6 +94,7 @@ namespace ToDoLy
                 //Edit task (update, mark as done, remove) 
                 if (answer.Trim() == "3") //edit task
                 {
+                    //show the list first
                     sortedTasks = tasks.OrderBy(task => task.DueDate).ThenBy(task => task.Project).ToList();
                     Console.WriteLine("\r\nThese are your tasks: ");
                     Methods.printTaskList(sortedTasks);

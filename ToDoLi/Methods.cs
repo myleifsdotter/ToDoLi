@@ -6,6 +6,7 @@ namespace ToDoLy
 {
     internal class Methods
     {
+        //get task deadline from user
         public static DateTime getDate()
         {
             DateTime parseDate;
@@ -20,6 +21,7 @@ namespace ToDoLy
             return parseDate;
         }
 
+        //printing the taskList to console
         public static void printTaskList(List<Task> taskList)
         {
             string isDone;
@@ -38,6 +40,8 @@ namespace ToDoLy
             }
             Console.WriteLine("-------------------------------------------------------------------");
         }
+        
+        //returns the Task whith editID from the tasklist
         public static Task getTaskToEdit(List<Task> tasks, int editID)
         {
             Task taskToEdit = null;
@@ -53,6 +57,8 @@ namespace ToDoLy
             return taskToEdit;
         }
 
+        //removes the task with editID from the tasklist
+        //in the case of duplicates the choice is to remove all or none
         public static void removeTask(List<Task> tasks, int editID)
         {
             string answer;
