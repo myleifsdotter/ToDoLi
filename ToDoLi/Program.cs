@@ -18,6 +18,7 @@ namespace ToDoLy
 
             //A bunch of variables used along the way
             List<Task> sortedTasks;
+            bool taskListEmpty;
             Task taskToEdit;
             int totalNumberOfTasks, numberOfCompletedTasks;
             string answer = "0"; //user input
@@ -33,8 +34,13 @@ namespace ToDoLy
             {
                 string dataFromFile = File.ReadAllText(filePath);
                 tasks = JsonConvert.DeserializeObject<List<Task>>(dataFromFile);
+                taskListEmpty = false;
             }
-            catch { Console.WriteLine("Could not read task file. Creating a new one."); }
+            catch 
+            { 
+                Console.WriteLine("Could not read task file. Creating a new one.");
+                taskListEmpty = true;
+            }
 
             //Menu of choices will run until user chooses to quit.
             while (true)
@@ -75,7 +81,9 @@ namespace ToDoLy
                 //Add new task to list
                 if (answer.Trim() == "2") //add task
                 {
-                    int newTaskID = tasks.Max(task => task.ID) + 1;
+                    int newTaskID;
+                    if(taskListEmpty == true) { newTaskID = 1; }
+                    else { newTaskID = tasks.Max(task => task.ID) + 1; }
                     Console.Write("\r\nAdd task description: ");
                     description = Console.ReadLine().Trim();
                     date = Methods.getDate();
